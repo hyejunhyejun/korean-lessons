@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한국어 자료실</title>
+<meta name="description" content="한국 어린이와 외국인 학습자를 위한 한국어 학습자료 모음">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="inner">
+    <p class="eyebrow">Korean Lessons</p>
+    <h1 class="site-title">한국어 자료실</h1>
+    <p class="site-desc">한국 어린이와 외국인 학습자를 위한 한국어 학습자료입니다. 보고 싶은 자료를 골라 보세요.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="tabs" role="tablist" aria-label="대상별 보기">
+    <button class="tab" role="tab" type="button" data-filter="all" aria-selected="true">전체</button>
+    <button class="tab" role="tab" type="button" data-filter="kids" aria-selected="false">👶 어린이</button>
+    <button class="tab" role="tab" type="button" data-filter="adult" aria-selected="false">🌏 외국인</button>
+  </div>
+
+  <ul class="cards" id="cards"></ul>
+
+  <footer class="site-foot">
+    <span>한국어 자료실</span>
+    <span id="count"></span>
+  </footer>
+
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

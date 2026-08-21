@@ -1,0 +1,6 @@
+[
+  { "id": "adult-animals", "profile": "adult", "title": "동물과 사람",
+    "topic": "동물", "emoji": "🐾", "level": "중급", "created": "2026-08-21" },
+  { "id": "kids-animals", "profile": "kids", "title": "동물 친구들",
+    "topic": "동물", "emoji": "🐯", "level": "초급", "created": "2026-08-21" }
+]

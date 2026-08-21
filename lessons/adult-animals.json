@@ -1,0 +1,143 @@
+{
+  "id": "adult-animals",
+  "profile": "adult",
+  "topic": "동물",
+  "title": "동물과 사람",
+  "emoji": "🐾",
+  "level": "중급",
+  "created": "2026-08-21",
+
+  "vocab": [
+    { "ko": "야생", "pos": "명사", "en": "the wild",
+      "ex": "야생 동물은 되도록 사람을 피해 다닌다.",
+      "exEn": "Wild animals tend to keep away from people." },
+    { "ko": "서식지", "pos": "명사", "en": "habitat",
+      "ex": "개발로 서식지가 빠르게 줄어들고 있다.",
+      "exEn": "Habitats are shrinking fast because of development." },
+    { "ko": "멸종위기", "pos": "명사", "en": "danger of extinction",
+      "ex": "이 새는 멸종위기에 처해 있다.",
+      "exEn": "This bird is in danger of extinction." },
+    { "ko": "개체 수", "pos": "명사", "en": "population (of a species)",
+      "ex": "보호 활동 덕분에 개체 수가 조금씩 늘었다.",
+      "exEn": "Thanks to conservation efforts, the population has grown slightly." },
+    { "ko": "먹이", "pos": "명사", "en": "food (for animals)",
+      "ex": "겨울에는 먹이를 구하기가 훨씬 어렵다.",
+      "exEn": "Finding food is much harder in winter." },
+    { "ko": "습성", "pos": "명사", "en": "habits, nature",
+      "ex": "동물마다 습성이 달라 돌보는 방법도 다르다.",
+      "exEn": "Each animal has different habits, so the care they need differs too." },
+    { "ko": "길들이다", "pos": "동사", "en": "to tame",
+      "ex": "야생 동물을 길들이는 일은 생각만큼 쉽지 않다.",
+      "exEn": "Taming a wild animal is not as easy as one might think." },
+    { "ko": "유기 동물", "pos": "명사", "en": "abandoned animal",
+      "ex": "유기 동물의 수가 해마다 늘고 있다.",
+      "exEn": "The number of abandoned animals is rising every year." },
+    { "ko": "보호소", "pos": "명사", "en": "shelter",
+      "ex": "보호소에는 주인을 잃은 동물이 많다.",
+      "exEn": "There are many animals at the shelter that have lost their owners." },
+    { "ko": "입양하다", "pos": "동사", "en": "to adopt",
+      "ex": "그는 보호소에서 강아지를 입양했다.",
+      "exEn": "He adopted a puppy from the shelter." },
+    { "ko": "공존하다", "pos": "동사", "en": "to coexist",
+      "ex": "사람과 동물이 공존할 방법을 찾아야 한다.",
+      "exEn": "We need to find a way for people and animals to coexist." },
+    { "ko": "무분별하다", "pos": "형용사", "en": "reckless, indiscriminate",
+      "ex": "무분별한 개발이 문제를 더 키웠다.",
+      "exEn": "Reckless development made the problem worse." }
+  ],
+
+  "reading": {
+    "text": "도시가 넓어지는 바람에 야생 동물이 살 곳은 점점 좁아지고 있다. 산을 깎아 길을 내고 건물을 세우면서 동물들의 서식지가 조각조각 나뉘었기 때문이다. 먹이를 구하지 못한 멧돼지나 고라니가 마을까지 내려오는 일도 이제는 드물지 않다. 사람들은 이런 동물을 위험하게 여기지만, 사실 그들도 갈 곳을 잃은 것뿐이다.\n전문가들은 무분별한 개발을 줄이고, 끊어진 숲과 숲을 이어 주는 생태 통로를 늘려야 한다고 말한다. 동물을 도시 밖으로 몰아내는 방식으로는 문제를 풀 수 없다는 것이다. 결국 사람과 동물이 어떻게 공존할지를 함께 고민해야 할 때다.",
+    "textEn": "As cities expand, the space where wild animals can live keeps shrinking. Mountains are cut away for roads and buildings, and habitats are broken into fragments. Wild boar and water deer that cannot find food now come down to villages fairly often. People see these animals as dangerous, but in truth they have simply lost the places they used to live.\nExperts say we should curb reckless development and build more ecological corridors connecting forests that have been cut off. Driving animals out of the city, they argue, will not solve the problem. In the end, it is time to think together about how people and animals can coexist.",
+    "questions": [
+      {
+        "q": "이 글의 중심 내용으로 알맞은 것은?",
+        "choices": [
+          "야생 동물을 도시에서 기르는 방법",
+          "도시 확장에 따른 서식지 감소와 공존의 필요성",
+          "멧돼지와 고라니의 생김새와 습성",
+          "생태 통로를 만드는 데 드는 공사 비용"
+        ],
+        "answer": 1,
+        "why": "첫 문단은 서식지가 줄어든 원인을, 둘째 문단은 공존을 위한 해법을 말하고 있습니다."
+      },
+      {
+        "q": "야생 동물이 마을까지 내려오는 이유로 알맞은 것은?",
+        "choices": [
+          "사람을 좋아하게 되어서",
+          "서식지가 나뉘어 먹이를 구하기 어려워서",
+          "날씨가 갑자기 따뜻해져서",
+          "보호소에서 도망쳐 나와서"
+        ],
+        "answer": 1,
+        "why": "'먹이를 구하지 못한 멧돼지나 고라니가 마을까지 내려오는' 부분에서 확인할 수 있습니다."
+      },
+      {
+        "q": "전문가들이 제안한 방법이 아닌 것은?",
+        "choices": [
+          "무분별한 개발 줄이기",
+          "생태 통로 늘리기",
+          "동물을 도시 밖으로 몰아내기",
+          "끊어진 숲과 숲을 이어 주기"
+        ],
+        "answer": 2,
+        "why": "글은 몰아내는 방식으로는 문제를 풀 수 없다고 분명히 밝히고 있습니다."
+      },
+      {
+        "q": "'그들도 갈 곳을 잃은 것뿐이다'의 뜻으로 가장 가까운 것은?",
+        "choices": [
+          "길을 잘 찾지 못하는 것이다",
+          "살 곳이 없어져 어쩔 수 없이 내려온 것이다",
+          "사람을 공격하려고 마음먹은 것이다",
+          "새로운 장소를 좋아하게 된 것이다"
+        ],
+        "answer": 1,
+        "why": "앞 문장의 '서식지가 조각조각 나뉘었다'와 이어서 읽으면 뜻이 분명해집니다."
+      }
+    ]
+  },
+
+  "grammar": [
+    {
+      "form": "-는 바람에",
+      "meaning": "앞의 일이 원인이 되어 뜻하지 않은 결과가 생겼음을 나타낸다. 주로 좋지 않은 결과에 쓴다.",
+      "meaningEn": "Indicates that the preceding event unexpectedly caused what follows — usually an unwanted result.",
+      "examples": [
+        "도시가 넓어지는 바람에 동물의 서식지가 줄었다.",
+        "갑자기 비가 오는 바람에 행사가 취소되었다.",
+        "늦잠을 자는 바람에 기차를 놓쳤다."
+      ]
+    },
+    {
+      "form": "-을 수밖에 없다",
+      "meaning": "다른 방법이 없어서 반드시 그렇게 된다는 뜻이다.",
+      "meaningEn": "There is no other option, so it inevitably turns out that way.",
+      "examples": [
+        "먹이가 없으니 마을로 내려올 수밖에 없다.",
+        "표가 다 팔려서 다음 날 갈 수밖에 없었다.",
+        "증거가 분명해서 잘못을 인정할 수밖에 없었다."
+      ]
+    }
+  ],
+
+  "dialogue": {
+    "situation": "기르던 강아지가 아파서 동물병원에 온 상황입니다.",
+    "lines": [
+      { "who": "수의사", "ko": "어디가 불편해서 오셨어요?", "en": "What seems to be the problem?" },
+      { "who": "보호자", "ko": "어제부터 밥을 통 안 먹어요. 물만 조금 마시고요.", "en": "He hasn't eaten at all since yesterday. He only drinks a little water." },
+      { "who": "수의사", "ko": "토하거나 설사한 적은 있나요?", "en": "Has he vomited or had diarrhea?" },
+      { "who": "보호자", "ko": "새벽에 두 번 토했어요. 그래서 걱정이 돼서 왔어요.", "en": "He threw up twice early this morning. That's why I got worried and came in." },
+      { "who": "수의사", "ko": "평소에 안 먹던 걸 먹었을 수도 있어요. 검사를 좀 해 볼게요.", "en": "He may have eaten something he normally doesn't. Let me run some tests." },
+      { "who": "보호자", "ko": "네, 부탁드립니다. 많이 아픈 건 아니겠죠?", "en": "Yes, please. It's nothing serious, is it?" },
+      { "who": "수의사", "ko": "지금 상태로는 크게 걱정하실 정도는 아닌 것 같습니다.", "en": "Judging by his condition now, it doesn't look like anything to worry about." },
+      { "who": "보호자", "ko": "다행이네요. 결과는 언제쯤 나오나요?", "en": "That's a relief. When will the results come out?" },
+      { "who": "수의사", "ko": "삼십 분쯤 걸립니다. 저쪽에서 잠시 기다려 주세요.", "en": "It takes about thirty minutes. Please wait over there for a moment." }
+    ],
+    "expressions": [
+      "어디가 불편해서 오셨어요? — 병원에서 증상을 물을 때 가장 흔히 쓰는 표현이다.",
+      "밥을 통 안 먹어요 — '통'은 '전혀'라는 뜻으로, 부정문에서만 쓴다.",
+      "-을 정도는 아니다 — 그 정도까지는 아니라고 낮춰 말할 때 쓴다.",
+      "부탁드립니다 — 진료나 서비스를 맡길 때 쓰는 정중한 표현이다."
+    ]
+  }
+}

@@ -1,0 +1,391 @@
+/* ─────────────────────────────────────────────
+   한국어 자료실 — 공통 스타일
+   색·글꼴 토큰은 여기서만 정의한다.
+   ───────────────────────────────────────────── */
+
+:root{
+  --paper:#FAFBFB;
+  --surface:#FFFFFF;
+  --surface-2:#F2F6F6;
+  --ink:#16232A;
+  --ink-soft:#4A5B63;
+  --ink-faint:#5E7178;
+  --rule:#DCE6E7;
+  --grid:#E9EFEF;
+  --accent:#0F6B62;
+  --accent-soft:#E4F0EE;
+  --kids:#A34C13;
+  --kids-soft:#FAEDE1;
+  --adult:#33559C;
+  --adult-soft:#E7EDF8;
+  --wrong:#B03A2E;
+  --wrong-soft:#FBEAE7;
+  --shadow:0 1px 2px rgba(22,35,42,.05), 0 8px 24px -14px rgba(22,35,42,.22);
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1618;
+    --surface:#161F22;
+    --surface-2:#1B2529;
+    --ink:#E8EFEF;
+    --ink-soft:#A8BABF;
+    --ink-faint:#8A9DA2;
+    --rule:#263437;
+    --grid:#1D282B;
+    --accent:#54C2B1;
+    --accent-soft:#15302D;
+    --kids:#E5975F;
+    --kids-soft:#31241A;
+    --adult:#88A6DE;
+    --adult-soft:#1A2333;
+    --wrong:#E88072;
+    --wrong-soft:#33201D;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+  }
+}
+
+:root[data-theme="dark"]{
+  --paper:#0F1618;
+  --surface:#161F22;
+  --surface-2:#1B2529;
+  --ink:#E8EFEF;
+  --ink-soft:#A8BABF;
+  --ink-faint:#8A9DA2;
+  --rule:#263437;
+  --grid:#1D282B;
+  --accent:#54C2B1;
+  --accent-soft:#15302D;
+  --kids:#E5975F;
+  --kids-soft:#31241A;
+  --adult:#88A6DE;
+  --adult-soft:#1A2333;
+  --wrong:#E88072;
+  --wrong-soft:#33201D;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans KR","Malgun Gothic",system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit;text-decoration:none}
+
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:3px;
+}
+
+.wrap{max-width:940px;margin:0 auto;padding:0 22px 88px}
+
+/* ── 머리말 ───────────────────────────── */
+
+.site-head{
+  position:relative;
+  border-bottom:1px solid var(--rule);
+  padding:52px 22px 34px;
+  overflow:hidden;
+}
+.site-head::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(to right, var(--grid) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(to bottom, var(--grid) 0 1px, transparent 1px 44px);
+  -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.8), transparent 80%);
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.8), transparent 80%);
+  pointer-events:none;
+}
+.site-head .inner{position:relative;max-width:940px;margin:0 auto}
+
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 14px;
+}
+.site-title{
+  font-family:"Gowun Batang","Batang",serif;
+  font-weight:700;
+  font-size:clamp(32px,5.4vw,46px);
+  line-height:1.2;letter-spacing:-.01em;
+  margin:0 0 12px;text-wrap:balance;
+}
+.site-desc{
+  color:var(--ink-soft);margin:0;max-width:34em;font-size:16px;
+}
+
+.back{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.06em;
+  color:var(--ink-faint);margin-bottom:20px;
+}
+.back:hover{color:var(--accent)}
+
+/* ── 목록 홈 ───────────────────────────── */
+
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 24px}
+.tab{
+  font-family:inherit;font-size:13.5px;
+  padding:6px 15px;border-radius:99px;cursor:pointer;
+  border:1px solid var(--rule);background:transparent;color:var(--ink-soft);
+}
+.tab:hover{border-color:var(--accent);color:var(--accent)}
+.tab[aria-selected="true"]{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+}
+
+.cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  list-style:none;margin:0;padding:0;
+}
+.card{
+  display:block;
+  border:1px solid var(--rule);border-radius:4px;
+  background:var(--surface);box-shadow:var(--shadow);
+  padding:26px 18px 20px;text-align:center;
+  transition:transform .12s ease, border-color .12s ease;
+}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .em{font-size:46px;line-height:1.15;display:block;margin-bottom:12px}
+.card .ti{font-size:16px;font-weight:600;display:block;margin-bottom:10px}
+.card .date{
+  display:block;margin-top:10px;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;color:var(--ink-faint);
+}
+
+.badge{
+  font-size:11.5px;letter-spacing:.02em;
+  padding:3px 10px;border-radius:99px;display:inline-block;
+}
+.badge.kids{background:var(--kids-soft);color:var(--kids)}
+.badge.adult{background:var(--adult-soft);color:var(--adult)}
+
+.empty{
+  border:1px dashed var(--rule);border-radius:4px;
+  padding:52px 24px;text-align:center;color:var(--ink-faint);
+}
+
+/* ── 자료 페이지 공통 ────────────────────── */
+
+.sec{margin-top:52px}
+.sec-title{
+  font-family:"Gowun Batang","Batang",serif;
+  font-size:24px;font-weight:700;margin:0 0 6px;
+  display:flex;align-items:baseline;gap:11px;
+}
+.sec-title .mark{
+  flex:none;width:10px;height:10px;
+  border:1.5px solid var(--accent);background:var(--accent-soft);
+  transform:translateY(-2px);
+}
+.sec-note{color:var(--ink-soft);margin:0 0 22px;font-size:14.5px}
+
+.speak{
+  font-family:inherit;font-size:inherit;
+  border:1px solid var(--rule);background:transparent;color:var(--ink-faint);
+  border-radius:99px;cursor:pointer;padding:3px 10px;line-height:1.4;
+}
+.speak:hover{border-color:var(--accent);color:var(--accent)}
+.speak[hidden]{display:none}
+
+/* ── 1번 · 어린이 ──────────────────────── */
+
+.kid-cards{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  list-style:none;margin:0;padding:0;
+}
+.kid-card{
+  border:2px solid var(--rule);border-radius:18px;
+  background:var(--surface);
+  padding:20px 10px 16px;text-align:center;
+  transition:transform .12s ease;
+}
+.kid-card:hover{transform:scale(1.04)}
+.kid-card .em{font-size:66px;line-height:1.1;display:block}
+.kid-card .w{font-size:26px;font-weight:600;margin-top:8px;display:block}
+.kid-card .hint{
+  display:block;margin-top:4px;font-size:15px;color:var(--ink-faint);
+}
+.kid-card .speak{margin-top:10px;font-size:15px}
+
+.kid-sents{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.kid-sent{
+  display:flex;align-items:center;gap:14px;
+  border:2px dashed var(--rule);border-radius:14px;
+  background:var(--surface);
+  padding:16px 20px;font-size:24px;line-height:1.6;
+}
+.kid-sent .speak{margin-left:auto;flex:none;font-size:18px}
+
+.writing-word{margin-bottom:26px}
+.writing-word > .lbl{
+  font-size:15px;color:var(--ink-faint);margin:0 0 8px;
+}
+.cells{display:flex;gap:10px;flex-wrap:wrap}
+.cell{
+  width:76px;height:76px;flex:none;
+  border:2px solid var(--rule);border-radius:6px;
+  display:grid;place-items:center;
+  font-family:"Gowun Batang","Batang",serif;
+  font-size:40px;color:var(--ink-faint);opacity:.35;
+  background:
+    linear-gradient(to right, var(--grid) 0 1px, transparent 1px) 50% 0/1px 100% no-repeat,
+    linear-gradient(to bottom, var(--grid) 0 1px, transparent 1px) 0 50%/100% 1px no-repeat;
+}
+.cell.blank{color:transparent}
+
+.print-btn{
+  font-family:inherit;font-size:14.5px;
+  margin-top:8px;padding:10px 20px;cursor:pointer;
+  border:1px solid var(--accent);border-radius:3px;
+  background:var(--accent);color:#fff;
+}
+.print-btn:hover{opacity:.88}
+
+/* ── 2번 · 외국인 ──────────────────────── */
+
+.en-bar{display:flex;justify-content:flex-end;margin-top:26px}
+.en-toggle{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.08em;cursor:pointer;
+  border:1px solid var(--adult);color:var(--adult);background:transparent;
+  padding:6px 14px;border-radius:3px;
+}
+.en-toggle[aria-pressed="true"]{background:var(--adult);color:#fff}
+
+.en{display:none;color:var(--adult);font-size:13.5px;line-height:1.6}
+body.show-en .en{display:block}
+
+.vocab{width:100%;border-collapse:collapse;font-size:15px}
+.vocab th{
+  text-align:left;font-weight:500;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);
+  border-bottom:1px solid var(--rule);padding:0 12px 8px 0;
+}
+.vocab td{border-bottom:1px solid var(--rule);padding:12px 12px 12px 0;vertical-align:top}
+.vocab td:first-child{font-weight:600;white-space:nowrap}
+.vocab .pos{color:var(--ink-faint);font-size:13.5px;white-space:nowrap}
+.table-scroll{overflow-x:auto}
+
+.passage{
+  border-left:3px solid var(--rule);
+  padding-left:20px;margin:0 0 30px;
+  font-size:16.5px;line-height:1.95;color:var(--ink-soft);
+  white-space:pre-line;
+}
+
+.qa{margin-bottom:26px}
+.qa .q{font-size:16px;font-weight:600;margin:0 0 12px}
+.opts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.opt{
+  font-family:inherit;font-size:15px;text-align:left;width:100%;
+  display:flex;gap:11px;align-items:flex-start;cursor:pointer;
+  border:1px solid var(--rule);border-radius:3px;
+  background:var(--surface);color:var(--ink);
+  padding:11px 15px;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .n{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;color:var(--ink-faint);padding-top:3px;flex:none;
+}
+.opt.right{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:500}
+.opt.right .n{color:var(--accent)}
+.opt.wrong{border-color:var(--wrong);background:var(--wrong-soft);color:var(--wrong)}
+.opt.wrong .n{color:var(--wrong)}
+.why{
+  font-size:14px;color:var(--ink-faint);
+  margin:12px 0 0;padding-left:2px;
+}
+.why[hidden]{display:none}
+
+.gram{
+  border:1px solid var(--rule);border-radius:4px;
+  background:var(--surface);box-shadow:var(--shadow);
+  padding:22px 22px 18px;margin-bottom:16px;
+}
+.gram .form{
+  font-family:"Gowun Batang","Batang",serif;
+  font-size:22px;font-weight:700;margin:0 0 8px;
+}
+.gram .mean{margin:0 0 6px;color:var(--ink-soft);font-size:15px}
+.gram ul{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:7px}
+.gram li{font-size:15px;color:var(--ink-soft)}
+
+.situation{
+  font-size:14.5px;color:var(--ink-faint);
+  border:1px dashed var(--rule);border-radius:4px;
+  padding:12px 16px;margin:0 0 20px;
+}
+.talk{list-style:none;margin:0 0 26px;padding:0;display:flex;flex-direction:column;gap:14px}
+.turn{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start}
+.turn .who{
+  font-size:13px;color:var(--ink-faint);padding-top:3px;
+  text-align:right;
+}
+.turn .ko{font-size:16px;margin:0}
+.turn .speak{margin-top:6px;font-size:13px}
+
+.expr{
+  border-top:1px solid var(--rule);padding-top:20px;
+  list-style:none;margin:0;padding-left:0;
+  display:flex;flex-direction:column;gap:11px;
+}
+.expr li{font-size:15px;color:var(--ink-soft);padding-left:16px;position:relative}
+.expr li::before{
+  content:"";position:absolute;left:0;top:.66em;
+  width:6px;height:6px;border:1px solid var(--ink-faint);
+}
+
+/* ── 꼬리말 ───────────────────────────── */
+
+.site-foot{
+  margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:11.5px;letter-spacing:.06em;color:var(--ink-faint);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ── 반응형 ───────────────────────────── */
+
+@media (max-width:760px){
+  .site-head{padding:40px 18px 28px}
+  .wrap{padding:0 18px 64px}
+  .cards{grid-template-columns:1fr 1fr}
+  .kid-cards{grid-template-columns:1fr 1fr}
+  .kid-card .em{font-size:56px}
+  .kid-sent{font-size:20px;padding:14px 16px}
+  .cell{width:60px;height:60px;font-size:32px}
+  .turn{grid-template-columns:1fr;gap:4px}
+  .turn .who{text-align:left}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+}
+
+/* ── 인쇄: 써보기 칸만 ─────────────────── */
+
+@media print{
+  body{background:#fff;color:#000}
+  .site-head, .site-foot, .back, .speak, .print-btn,
+  .en-bar, .sec:not(.sec-writing){display:none !important}
+  .sec-writing{margin-top:0;page-break-inside:avoid}
+  .print-title{display:block !important}
+  .cell{border-color:#999;width:74px;height:74px;background:none}
+  .cell, .cell.blank{color:#bbb;opacity:1}
+}
+.print-title{display:none;font-size:20px;font-weight:600;margin:0 0 20px}
