@@ -8,12 +8,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/style.css">
+<script>
+  // 저장해 둔 밝기 설정을 그리기 전에 먼저 적용한다(화면이 번쩍이지 않도록).
+  try {
+    var t = localStorage.getItem('theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 </head>
 <body>
 
 <header class="site-head">
   <div class="inner">
-    <p class="eyebrow" id="crumb">Korean Lessons</p>
+    <div class="head-row">
+      <p class="eyebrow" id="crumb">Korean Lessons</p>
+      <button class="theme-btn" id="themeBtn" type="button"></button>
+    </div>
     <h1 class="site-title" id="title">불러오는 중…</h1>
     <p class="site-desc" id="desc"></p>
   </div>

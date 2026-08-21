@@ -260,7 +260,41 @@ function wireAdult(box) {
   });
 }
 
+/* ── 밝기 (밝게 / 어둡게) ─────────────────── */
+
+function wireTheme() {
+  const btn = document.getElementById('themeBtn');
+  if (!btn) return;
+
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  // 직접 고른 값이 있으면 그것을, 없으면 기기 설정을 따른다.
+  const current = () =>
+    document.documentElement.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+
+  const paint = () => {
+    const dark = current() === 'dark';
+    btn.textContent = dark ? '☀ 밝게' : '☾ 어둡게';
+    btn.setAttribute('aria-label', dark ? '밝은 화면으로 바꾸기' : '어두운 화면으로 바꾸기');
+  };
+
+  btn.addEventListener('click', () => {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch { /* 저장이 막힌 기기 */ }
+    paint();
+  });
+
+  // 아직 직접 고른 적이 없으면 기기 설정 변화를 따라간다.
+  systemDark.addEventListener('change', () => {
+    if (!document.documentElement.dataset.theme) paint();
+  });
+
+  paint();
+}
+
 /* ── 시작 ───────────────────────────────── */
+
+wireTheme();
 
 const cards = document.getElementById('cards');
 const content = document.getElementById('content');

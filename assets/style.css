@@ -20,6 +20,7 @@
   --adult-soft:#E7EDF8;
   --wrong:#B03A2E;
   --wrong-soft:#FBEAE7;
+  --on-strong:#FFFFFF;
   --shadow:0 1px 2px rgba(22,35,42,.05), 0 8px 24px -14px rgba(22,35,42,.22);
 }
 
@@ -41,6 +42,7 @@
     --adult-soft:#1A2333;
     --wrong:#E88072;
     --wrong-soft:#33201D;
+    --on-strong:#0F1618;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
   }
 }
@@ -62,6 +64,7 @@
   --adult-soft:#1A2333;
   --wrong:#E88072;
   --wrong-soft:#33201D;
+  --on-strong:#0F1618;
   --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -14px rgba(0,0,0,.7);
 }
 
@@ -107,11 +110,23 @@ a{color:inherit;text-decoration:none}
 }
 .site-head .inner{position:relative;max-width:940px;margin:0 auto}
 
+.head-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;margin-bottom:14px;
+}
 .eyebrow{
   font-family:"IBM Plex Mono",ui-monospace,monospace;
   font-size:12px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 14px;
+  color:var(--accent);margin:0;
 }
+.theme-btn{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:12px;letter-spacing:.06em;cursor:pointer;flex:none;
+  border:1px solid var(--rule);border-radius:99px;
+  background:transparent;color:var(--ink-soft);
+  padding:6px 14px;
+}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
 .site-title{
   font-family:"Gowun Batang","Batang",serif;
   font-weight:700;
@@ -141,7 +156,7 @@ a{color:inherit;text-decoration:none}
 }
 .tab:hover{border-color:var(--accent);color:var(--accent)}
 .tab[aria-selected="true"]{
-  background:var(--accent);border-color:var(--accent);color:#fff;
+  background:var(--accent);border-color:var(--accent);color:var(--on-strong);
 }
 
 .cards{
@@ -249,7 +264,7 @@ a{color:inherit;text-decoration:none}
   font-family:inherit;font-size:14.5px;
   margin-top:8px;padding:10px 20px;cursor:pointer;
   border:1px solid var(--accent);border-radius:3px;
-  background:var(--accent);color:#fff;
+  background:var(--accent);color:var(--on-strong);
 }
 .print-btn:hover{opacity:.88}
 
@@ -262,7 +277,7 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--adult);color:var(--adult);background:transparent;
   padding:6px 14px;border-radius:3px;
 }
-.en-toggle[aria-pressed="true"]{background:var(--adult);color:#fff}
+.en-toggle[aria-pressed="true"]{background:var(--adult);color:var(--on-strong)}
 
 .en{display:none;color:var(--adult);font-size:13.5px;line-height:1.6}
 body.show-en .en{display:block}
